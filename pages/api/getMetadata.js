@@ -4,7 +4,9 @@ const axios = require('axios');
 let response = null;
 export default async function handler(req, res) {
   const { query: { idsCrypto } } = req;
+
   try {
+
     response = await axios.get(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${idsCrypto}`, {
       headers: {
         'X-CMC_PRO_API_KEY': '5c778be2-3ba2-4139-90af-d78ad31dcab9',
