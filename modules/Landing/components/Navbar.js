@@ -58,7 +58,7 @@ function Navbar() {
                             <li className='nav-item'>
                                 <a
                                     className='flex items-center px-2 py-4 text-3xl font-bold uppercase  text-white hover:opacity-75'
-                                    href='#pablo'
+                                    href='/market'
                                 >
                                     <span className='ml-2'>Market</span>
                                 </a>
