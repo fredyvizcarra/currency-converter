@@ -59,7 +59,6 @@ const Conveter = () => {
                             <option value="SHIB">Shiba Inc-SHIB</option>
                             <option value="DOGE">dogecoin-DOGE</option>
                             <option value="BNB">BNB-BNB</option>
-                            <option value="APE">ApeCoin-APE</option>
                             <option value="SAND">The sandbox-SAND</option>
                             <option value="AXS">Axie Infity-AXS</option>
                             <option value="USD">United States Dollar-USD</option>
@@ -83,7 +82,6 @@ const Conveter = () => {
                             <option value="SHIB">Shiba Inc-SHIB</option>
                             <option value="DOGE">dogecoin-DOGE</option>
                             <option value="BNB">BNB-BNB</option>
-                            <option value="APE">ApeCoin-APE</option>
                             <option value="SAND">The sandbox-SAND</option>
                             <option value="AXS">Axie Infity-AXS</option>
                             <option value="USD">United States Dollar-USD</option>
