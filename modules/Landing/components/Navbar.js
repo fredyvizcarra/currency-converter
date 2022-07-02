@@ -24,7 +24,7 @@ function Navbar() {
                             <li>
                                 <a
                                     className='flex items-start px-2 py-5 text-xl   text-white hover:opacity-75'
-                                    href=''
+                                    href='/about'
                                 >
                                     <span className='ml-2'>About</span>
                                 </a>
@@ -71,19 +71,12 @@ function Navbar() {
                             <li>
                                 <a
                                     className='text-md flex items-start px-2 py-1  text-white hover:opacity-75'
-                                    href=''
+                                    href='/about'
                                 >
                                     <span className='ml-2'>About</span>
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                    className='text-md flex items-start px-2 py-1   text-white hover:opacity-75'
-                                    href=''
-                                >
-                                    <span className='ml-2'>Contact</span>
-                                </a>
-                            </li>
+
                         </ul>
                         <ul className='lg:mt-15 mt-80 ml-3   flex space-x-3'>
                             <li>

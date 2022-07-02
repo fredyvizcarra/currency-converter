@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Navbar />
-            <main className='flex justify-center h-screen bg-primary'>
+            <main className=' h-full bg-primary'>
 
 
                 {children}

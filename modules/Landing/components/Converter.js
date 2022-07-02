@@ -41,9 +41,9 @@ const Conveter = () => {
 
     return (
 
-        <div className=" mt-14 h-2/4 w-3/4 bg-white shadow-2xl rounded-3xl">
-            <h1 className=" flex justify-center text-2xl font-normal leading-normal pt-8 mb-2 text-terciary sm:text-4xl">Cryptocurrecy Converter</h1>
-            <form onSubmit={handleSubmit} className=" p-14">
+        <div className=" mt-14 h-auto w-3/4 bg-white shadow-2xl rounded-3xl">
+            <h1 className=" flex justify-center text-2xl font-normal leading-normal pt-8  text-terciary sm:text-4xl">Cryptocurrecy Converter</h1>
+            <form onSubmit={handleSubmit} className=" p-12">
                 <div className="flex justify-center space-x-0">
                     <label className="inline-block relative w-64">
 
@@ -97,7 +97,7 @@ const Conveter = () => {
                 </div>
 
             </form>
-            <div className=" flex justify-center relative ">
+            <div className=" flex justify-center relative pb-8">
                 <div className="h-10 w-72 block appearance-none  bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                     {data && data.map(item => {
                         return <div className="flex justify-center">{item.quote?.[newValue.coinTwo]?.price} </div>

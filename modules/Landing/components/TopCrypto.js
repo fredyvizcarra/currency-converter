@@ -54,36 +54,34 @@ export default function TopCrypto() {
     const data = filterData();
 
     return (
+        <div className=" w-11/12 flex jsutify-center  overflow-x-auto shadow-md sm:rounded-lg mt-10 mb-10">
+            <table className="  w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead className=" text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" className="pl-44 py-3 e">
+                            Name
+                        </th>
+                        <th scope="col" className="px-6 py-3 ">
+                            Price USD
+                        </th>
+                        <th scope="col" className="px-6 py-3 invisible sm:visible">
+                            Change 24h
+                        </th>
+                        <th scope="col" className="px-6 py-3 invisible md:visible">
+                            Cap market
+                        </th>
+                        <th scope="col" className="px-6 py-3  invisible md:visible">
+                            Volume(24h)
+                        </th>
 
-        <Fragment>
+                    </tr>
+                </thead>
+                {data.map(item => {
+                    return (
+                        <tbody >
 
-
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10 mb-10">
-                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead className="  text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" className="pl-44 py-3 e">
-                                Name
-                            </th>
-                            <th scope="col" className="px-6 py-3 ">
-                                Price USD
-                            </th>
-                            <th scope="col" className="px-6 py-3k">
-                                Change 24h
-                            </th>
-                            <th scope="col" className="px-6 py-3 ">
-                                Cap market
-                            </th>
-                            <th scope="col" className="px-6 py-3  ">
-                                Volume(24h)
-                            </th>
-
-                        </tr>
-                    </thead>
-                    {data.map(item => {
-                        return (
-                            <tbody >
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+                                <a href={item.slug}>
                                     <th scope="row" className=" md:visible px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                         <div className='flex '>
                                             <div className='w-20 ml-16'>
@@ -98,36 +96,38 @@ export default function TopCrypto() {
 
                                         </div>
                                     </th>
-                                    <td className="px-6 py-4">
-                                        <div className="">
-                                            $ {item.quote?.USD.price.toFixed(2)}
-                                        </div>
-                                    </td>
-                                    <td className="p-6 py-4  ">
-                                        <div className="">
-                                            % {item.quote?.USD.percent_change_24h.toFixed(2)}
-                                        </div>
-                                    </td>
-                                    <td className="px-6 py-4   ">
-                                        <div className="">
-                                            $ {item.quote?.USD.market_cap.toFixed(2)}
-                                        </div>
-                                    </td>
-                                    <td className="px-6 py-4  ">
-                                        <div className="">
-                                            $ {item.quote?.USD.volume_24h.toFixed(2)}
-                                        </div>
-                                    </td>
+                                </a>
 
-                                </tr>
-                            </tbody>
-                        )
-                    })}
-                </table>
+                                <td className="px-6 py-4">
+                                    <div className="">
+                                        $ {item.quote?.USD.price.toFixed(2)}
+                                    </div>
+                                </td>
+                                <td className="p-6 py-4 invisible sm:visible">
+                                    <div className="">
+                                        % {item.quote?.USD.percent_change_24h.toFixed(2)}
+                                    </div>
+                                </td>
+                                <td className="px-6 py-4   invisible md:visible">
+                                    <div className="">
+                                        $ {item.quote?.USD.market_cap.toFixed(2)}
+                                    </div>
+                                </td>
+                                <td className="px-6 py-4  invisible md:visible">
+                                    <div className="">
+                                        $ {item.quote?.USD.volume_24h.toFixed(2)}
+                                    </div>
+                                </td>
 
-            </div>
+                            </tr>
+                        </tbody>
+                    )
+                })}
+            </table>
 
-        </Fragment>
+        </div>
+
+
 
     )
 }
