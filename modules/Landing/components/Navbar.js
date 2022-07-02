@@ -50,7 +50,7 @@ function Navbar() {
                             <li>
                                 <a
                                     className='flex items-center px-2 py-4 text-3xl font-bold uppercase  text-white hover:opacity-75'
-                                    href=''
+                                    href='/'
                                 >
                                     <span className='ml-2'>Home</span>
                                 </a>

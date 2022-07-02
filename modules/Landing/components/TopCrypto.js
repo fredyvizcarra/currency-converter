@@ -58,23 +58,23 @@ export default function TopCrypto() {
         <Fragment>
 
 
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10 mb-10">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead className="  text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" className="pl-44 py-3">
+                            <th scope="col" className="pl-44 py-3 e">
                                 Name
                             </th>
-                            <th scope="col" className="px-6 py-3">
+                            <th scope="col" className="px-6 py-3 ">
                                 Price USD
                             </th>
-                            <th scope="col" className="px-6 py-3">
+                            <th scope="col" className="px-6 py-3k">
                                 Change 24h
                             </th>
-                            <th scope="col" className="px-6 py-3">
+                            <th scope="col" className="px-6 py-3 ">
                                 Cap market
                             </th>
-                            <th scope="col" className="px-6 py-3">
+                            <th scope="col" className="px-6 py-3  ">
                                 Volume(24h)
                             </th>
 
@@ -82,9 +82,9 @@ export default function TopCrypto() {
                     </thead>
                     {data.map(item => {
                         return (
-                            <tbody>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                            <tbody >
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+                                    <th scope="row" className=" md:visible px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                         <div className='flex '>
                                             <div className='w-20 ml-16'>
                                                 <img className='h-10 w-10 rounded-full m-2' src={item.crypto_data?.logo} alt='' />
@@ -103,17 +103,17 @@ export default function TopCrypto() {
                                             $ {item.quote?.USD.price.toFixed(2)}
                                         </div>
                                     </td>
-                                    <td className="p-6 py-4">
+                                    <td className="p-6 py-4  ">
                                         <div className="">
                                             % {item.quote?.USD.percent_change_24h.toFixed(2)}
                                         </div>
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4   ">
                                         <div className="">
                                             $ {item.quote?.USD.market_cap.toFixed(2)}
                                         </div>
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4  ">
                                         <div className="">
                                             $ {item.quote?.USD.volume_24h.toFixed(2)}
                                         </div>
